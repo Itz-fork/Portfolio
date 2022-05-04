@@ -1,0 +1,19 @@
+/* Language component */
+.lang_card {
+    @apply flex flex-grow card bg-base-100 glass m-2 opacity-80;
+}
+
+.lang_ico {
+    @layer @apply w-20 lg:w-15 sm:w-10 mask mask-squircle;
+    pointer-events: none;
+}
+
+.lang_name {
+    @apply text-center font-extrabold
+}
+
+/* Footer */
+.footer_social {
+    @apply w-10 lg:w-12;
+    pointer-events: none;
+}
