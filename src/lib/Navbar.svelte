@@ -79,6 +79,12 @@
                                 target="_blank">Twitter</a
                             >
                         </li>
+                        <li>
+                            <a
+                                href="https://github.com/Itz-fork/Sveltefolio"
+                                target="_blank">Sauce 😋</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
