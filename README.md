@@ -1,4 +1,8 @@
 # Sveltefolio
+
+https://user-images.githubusercontent.com/103873789/166750591-a539c4c3-4e49-4e3e-b073-c61393556035.mp4
+
+
 [Itz-fork's](https://github.com/Itz-fork) simple portfolio made with svelte ([demo](https://sveltefolio.vercel.app/))
 
 ## Run locally
