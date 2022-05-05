@@ -14,6 +14,7 @@
 					src="https://avatars.githubusercontent.com/u/77770753?v=4"
 					alt="Avatar"
 					class="rounded-lg max-w-sm mx-auto"
+					style="pointer-events: none;"
 				/>
 			</figure>
 			<!-- About paragraph -->
