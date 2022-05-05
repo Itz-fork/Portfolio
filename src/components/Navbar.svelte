@@ -1,20 +1,22 @@
 <script>
 	// Theme switcher
-	import { onMount } from 'svelte';
-	import { themeChange } from 'theme-change';
+	import { onMount } from "svelte";
+	import { themeChange } from "theme-change";
 
-	let themeName = '';
+	let themeName = "";
 	onMount(() => {
 		themeChange(false);
-		themeName = window.localStorage.getItem('theme') || 'Lofi';
+		themeName = window.localStorage.getItem("theme") || "Lofi";
 	});
 
 	function chnagethemeName() {
-		themeName = themeName == 'Lofi' ? 'Dracula' : 'Lofi';
+		themeName = themeName == "Lofi" ? "Dracula" : "Lofi";
 	}
 
 	// Scroll
-	import { scrollTop } from 'svelte-scrolling';
+	import { scrollTop } from "svelte-scrolling";
+	// Importing page
+	import { page } from "$app/stores";
 </script>
 
 <main>
@@ -28,9 +30,15 @@
 			<div class="flex-none gap-2">
 				<!-- Navbar menu -->
 				<ul class="menu menu-horizontal p-0">
-					<li><a href="/">Home</a></li>
-					<li><a href="/about">About</a></li>
-					<li><a href="/projects">Projects</a></li>
+					{#if $page.url.pathname != "/"}
+						<li><a href="/">Home</a></li>
+					{/if}
+					{#if $page.url.pathname != "/about"}
+						<li><a href="/about">About</a></li>
+					{/if}
+					{#if $page.url.pathname != "/projects"}
+						<li><a href="/projects">Projects</a></li>
+					{/if}
 				</ul>
 
 				<!-- Avatar -->
