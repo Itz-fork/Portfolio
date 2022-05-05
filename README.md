@@ -10,6 +10,17 @@ pnpm i
 pnpm run dev
 ```
 
+### Deploy ☁️
+
+- Install [vercel cli](https://vercel.com/cli)
+- Then change directory to 'Sveltefolio' and run
+```sh
+# Sets-up a new vercel project for the first time
+vercel
+
+# Deploys app to production
+vercel --prod
+```
 
 ## Used packages 📦
 - UI components - [Daisy UI](https://github.com/saadeghi/daisyui)
