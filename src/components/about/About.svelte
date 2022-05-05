@@ -7,7 +7,7 @@
 	<section use:scrollRef={'about'}>
 		<div class="card my-20 bg-base-100 text-center" data-aos="fade-up">
 			<!-- About heading -->
-			<h1 class="text-4xl font-bold mb-2 fade-in">About</h1>
+			<h1 class="text-5xl font-bold mb-2 fade-in animate-pulse">About</h1>
 			<!-- About pic -->
 			<figure>
 				<img
