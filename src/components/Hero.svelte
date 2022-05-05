@@ -11,7 +11,7 @@
 				<h1 class="mb-5 text-5xl font-bold animate-pulse fade-in">Welcome!</h1>
 				<!-- Damn paragraph -->
 				<p class="mb-5 text-lg fade-in" id="second">
-					Hello (random) visitor, Welcome to my Portfolio! Here you can find most of the things
+					Hello (random) visitor, Welcome to Itz-fork's Portfolio! Here you can find most of the things
 					about me. Just keep in mind that this is still a prototype and yet to be finished
 				</p>
 				<a href="/about">

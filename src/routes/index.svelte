@@ -15,6 +15,8 @@
 
 <main>
 	<Navbar />
+
 	<Hero />
+	
 	<Footer />
 </main>
