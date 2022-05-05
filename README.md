@@ -15,7 +15,7 @@ pnpm run dev
 - UI components - [Daisy UI](https://github.com/saadeghi/daisyui)
 - Other styles - [Tailwind](http://tailwindcss.com/)
 - Smooth scrolling - [svelte-scrolling](https://github.com/valmisson/svelte-scrolling)
-- Scroll animations(used in languages section) - [saos](https://github.com/shiryel/saos)
+- Scroll animations used in languages section - [saos](https://github.com/shiryel/saos)
 - Theme changer - [theme-change](https://github.com/saadeghi/theme-change)
 
 
