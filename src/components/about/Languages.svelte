@@ -1,105 +1,104 @@
 <script>
-	import { scrollRef } from 'svelte-scrolling';
-	import '../../styles/tailclasses.css';
+	// Importing libs
+	import { scrollRef } from "svelte-scrolling";
+	import Saos from "saos/src/Saos.svelte";
+
+	// Importing css
+	import "../../styles/tailclasses.css";
+
+	// Language list
+	let langsList = [
+		{
+			name: "python",
+			desc: "I started programming with python",
+			prgs: "82"
+		},
+		{
+			name: "javascript",
+			desc: "Learned the basics just because this shit is required to make interactive websites",
+			prgs: "37"
+		},
+		{
+			name: "dart",
+			desc: "Had to learn because of the Flutter framework, now I love it ❤️!",
+			prgs: "45"
+		},
+		{
+			name: "bash",
+			desc: "Started to learn bash scripting recently to make installer scripts for my programs",
+			prgs: "45"
+		},
+		{
+			name: "html",
+			desc: "About 2 years ago started to make some crappy web-pages...",
+			prgs: "85"
+		},
+		{
+			name: "css",
+			desc: "Wanted to make some cool looking websites but here I am, still making some ugly-ass webpages",
+			prgs: "65"
+		}
+	];
 </script>
 
 <main>
-	<section class="text-center" use:scrollRef={'langs'}>
+	<section class="text-center" use:scrollRef={"langs"}>
 		<!-- Languages heading -->
 		<h1 class="text-4xl font-bold mb-2">Languages</h1>
 		<h3 class="text-1xl font-semibold mb-2">- I know -</h3>
 
 		<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 place-items-center">
-			<!-- Python -->
-			<div class="lang_card">
-				<figure>
-					<img src="/imgs/languages/python.svg" alt="Python logo" class="lang_ico" />
-				</figure>
-				<div class="card-body">
-					<h2 class="lang_name">Python</h2>
-					<p>
-						I started programming with python
-						<br />
-						<progress class="progress progress-info w-56" value="82" max="100" />
-					</p>
-				</div>
-			</div>
-
-			<!-- JS -->
-			<div class="lang_card">
-				<figure>
-					<img src="/imgs/languages/js.svg" alt="JS logo" class="lang_ico" />
-				</figure>
-				<div class="card-body">
-					<h2 class="lang_name">Javascript</h2>
-					<p>
-						Learned the basics just because this shit is required to make interactive websites
-						<br />
-						<progress class="progress progress-info w-56" value="37" max="100" />
-					</p>
-				</div>
-			</div>
-
-			<!-- HTML -->
-			<div class="lang_card">
-				<figure>
-					<img src="/imgs/languages/html.svg" alt="Html logo" class="lang_ico" />
-				</figure>
-				<div class="card-body">
-					<h2 class="lang_name">HTML</h2>
-					<p>
-						About 2 years ago started to make some crappy web-pages...
-						<br />
-						<progress class="progress progress-info w-56" value="80" max="100" />
-					</p>
-				</div>
-			</div>
-
-			<!-- CSS -->
-			<div class="lang_card">
-				<figure>
-					<img src="/imgs/languages/css.svg" alt="Css logo" class="lang_ico" />
-				</figure>
-				<div class="card-body">
-					<h2 class="lang_name">CSS</h2>
-					<p>
-						Wanted to make some cool looking websites but here I am, still making some ugly-ass
-						webpages
-						<br />
-						<progress class="progress progress-info w-56" value="65" max="100" />
-					</p>
-				</div>
-			</div>
-
-			<!-- BASH -->
-			<div class="lang_card">
-				<figure>
-					<img src="/imgs/languages/bash.svg" alt="Bash logo" class="lang_ico" />
-				</figure>
-				<div class="card-body">
-					<h2 class="lang_name">Bash</h2>
-					<p>
-						Started to learn bash scripting recently to make installer scripts for my programs
-						<br />
-						<progress class="progress progress-info w-56" value="30" max="100" />
-					</p>
-				</div>
-			</div>
-
-			<!-- DART -->
-			<div class="lang_card">
-				<figure>
-					<img src="/imgs/languages/dart.svg" alt="Dart logo" class="lang_ico" />
-				</figure>
-				<div class="card-body">
-					<h2 class="lang_name">Dart</h2>
-					<p>
-						Had to learn because of the Flutter framework, now I love it ❤️!
-						<br />
-						<progress class="progress progress-info w-56" value="45" max="100" />
-					</p>
-				</div>
-			</div>
+			{#each langsList as lang}
+				<Saos
+					animation={"fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"}
+					animation_out={"slide-out-fwd-center 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both"}
+				>
+					<div class="lang_card">
+						<figure>
+							<img src="/imgs/languages/{lang.name}.svg" alt="Python logo" class="lang_ico" />
+						</figure>
+						<div class="card-body">
+							<h2 class="lang_name">{lang.name.toUpperCase()}</h2>
+							<p>
+								{lang.desc}
+								<br />
+								<progress class="progress progress-info w-56" value={lang.prgs} max="100" />
+							</p>
+						</div>
+					</div>
+				</Saos>
+			{/each}
 		</div>
 	</section>
 </main>
+
+<style>
+	/* Copied from https://github.com/shiryel/saos/blob/master/demo/src/Animations.svelte */
+	/* ----------------------------------------------
+ * Animations below by Animista on 2020-7-11
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+	@keyframes -global-fade-in {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes -global-slide-out-fwd-center {
+		0% {
+			transform: translateZ(1);
+			opacity: 1;
+		}
+
+		100% {
+			transform: translateZ(600px);
+			opacity: 0;
+		}
+	}
+</style>

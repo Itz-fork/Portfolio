@@ -1,12 +1,13 @@
 <script>
 	import { scrollRef } from 'svelte-scrolling';
+	import "../../styles/animation.css"
 </script>
 
 <main>
 	<section use:scrollRef={'about'}>
-		<div class="card my-20 bg-base-100 text-center">
+		<div class="card my-20 bg-base-100 text-center" data-aos="fade-up">
 			<!-- About heading -->
-			<h1 class="text-4xl font-bold mb-2">About</h1>
+			<h1 class="text-4xl font-bold mb-2 fade-in">About</h1>
 			<!-- About pic -->
 			<figure>
 				<img
@@ -16,7 +17,7 @@
 				/>
 			</figure>
 			<!-- About paragraph -->
-			<div class="my-2 m-2 lg:text-lg">
+			<div class="my-2 m-10 lg:text-lg fade-in" id="second">
 				<p>
 					<span class="font-semibold text-lg text-info">Itz-fork</span> is a 15yo kid who loves programming.
 					He is a back-end developer although recently started front-end development as well. He was
