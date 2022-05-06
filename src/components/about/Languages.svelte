@@ -41,36 +41,34 @@
 	];
 </script>
 
-<main>
-	<section class="text-center" use:scrollRef={"langs"}>
-		<!-- Languages heading -->
-		<h1 class="text-4xl font-bold mb-2">Languages</h1>
-		<h3 class="text-1xl font-semibold mb-2">- I know -</h3>
+<section class="text-center" use:scrollRef={"langs"}>
+	<!-- Languages heading -->
+	<h1 class="text-4xl font-bold mb-2">Languages</h1>
+	<h3 class="text-1xl font-semibold mb-2">- I know -</h3>
 
-		<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 place-items-center">
-			{#each langsList as lang}
-				<Saos
-					animation={"fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"}
-					animation_out={"slide-out-fwd-center 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both"}
-				>
-					<div class="lang_card">
-						<figure>
-							<img src="/imgs/languages/{lang.name}.svg" alt="Python logo" class="lang_ico" />
-						</figure>
-						<div class="card-body">
-							<h2 class="lang_name">{lang.name.toUpperCase()}</h2>
-							<p>
-								{lang.desc}
-								<br />
-								<progress class="progress progress-info w-56" value={lang.prgs} max="100" />
-							</p>
-						</div>
+	<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 place-items-center">
+		{#each langsList as lang}
+			<Saos
+				animation={"fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"}
+				animation_out={"slide-out-fwd-center 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both"}
+			>
+				<div class="lang_card">
+					<figure>
+						<img src="/imgs/languages/{lang.name}.svg" alt="Python logo" class="lang_ico" />
+					</figure>
+					<div class="card-body">
+						<h2 class="lang_name">{lang.name.toUpperCase()}</h2>
+						<p>
+							{lang.desc}
+							<br />
+							<progress class="progress progress-info w-56" value={lang.prgs} max="100" />
+						</p>
 					</div>
-				</Saos>
-			{/each}
-		</div>
-	</section>
-</main>
+				</div>
+			</Saos>
+		{/each}
+	</div>
+</section>
 
 <style>
 	/* Copied from https://github.com/shiryel/saos/blob/master/demo/src/Animations.svelte */

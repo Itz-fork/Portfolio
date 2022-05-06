@@ -1,4 +1,5 @@
 <script context="module">
+	// @ts-ignore
 	export async function load({ fetch }) {
 		const res = await fetch(
 			"https://api.github.com/search/repositories?q=org:Itz-fork&sort=stars&order=desc&per_page=10"
