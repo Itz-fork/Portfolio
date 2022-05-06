@@ -4,6 +4,7 @@
 	import { onMount } from "svelte";
 	import { scrollTop } from "svelte-scrolling";
 	import { themeChange } from "theme-change";
+	import sveltefolioData from "../sveltefolio.config";
 
 	// Theme switcher
 	let themeName = "";
@@ -21,7 +22,7 @@
 	<div class="navbar bg-base-100 navbar-center opacity-90">
 		<div class="flex-1">
 			<!-- svelte-ignore a11y-missing-attribute -->
-			<a class="btn btn-ghost normal-case text-xl" on:click={() => scrollTop()}>Itz-fork</a>
+			<a class="btn btn-ghost normal-case text-xl" on:click={() => scrollTop()}>{sveltefolioData.name}</a>
 		</div>
 
 		<div class="flex-none gap-2">
@@ -44,7 +45,7 @@
 				<label tabindex="0" class="btn btn-ghost btn-circle avatar">
 					<div class="w-10 rounded-full">
 						<!-- svelte-ignore a11y-missing-attribute -->
-						<img src="https://avatars.githubusercontent.com/u/77770753?v=4" />
+						<img src="{sveltefolioData.avatar_url}" alt="Navbar avatar"/>
 					</div>
 				</label>
 
@@ -62,12 +63,12 @@
 					<!-- Social links -->
 					<span class="font-semibold">Social</span>
 					<li>
-						<a href="https://github.com/Itz-fork" target="_blank">Github</a>
+						<a href="https://github.com/{sveltefolioData.github_username}" target="_blank">Github</a>
 						<a href="https://t.me/Bruh_0x" target="_blank">Telegram</a>
 						<a href="https://twitter.com/im_itz_fork" target="_blank">Twitter</a>
 					</li>
 					<li>
-						<a href="https://github.com/Itz-fork/Sveltefolio" target="_blank">Sauce 😋</a>
+						<a href="https://github.com/{sveltefolioData.github_username}/Sveltefolio" target="_blank">Sauce 😋</a>
 					</li>
 				</ul>
 			</div>

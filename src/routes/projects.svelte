@@ -2,7 +2,7 @@
 	// @ts-ignore
 	export async function load({ fetch }) {
 		const res = await fetch(
-			"https://api.github.com/search/repositories?q=org:Itz-fork&sort=stars&order=desc&per_page=10"
+			"https://api.github.com/search/repositories?q=org:{sveltefolioData.github_username}&sort=stars&order=desc&per_page=10"
 		);
 
 		if (res.ok) {
@@ -16,9 +16,12 @@
 </script>
 
 <script>
+	// Imports
 	import Project from "../components/Project.svelte";
 	import Navbar from "../components/Navbar.svelte";
 	import Footer from "../components/Footer.svelte";
+	import sveltefolioData from "../sveltefolio.config.js";
+	
 	export /**
 	 * @type {never[]}
 	 */
@@ -41,7 +44,7 @@
 
 	<p class="text-center">
 		<a
-			href="https://github.com/Itz-fork?tab=repositories&q=&type=&language=&sort=stargazers"
+			href="https://github.com/{sveltefolioData.github_username}?tab=repositories&q=&type=&language=&sort=stargazers"
 			target="_blank"
 		>
 			<button class="btn btn-wide">Other repos -></button>

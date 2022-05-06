@@ -1,6 +1,7 @@
 <script>
-	import { scrollRef } from "svelte-scrolling";
 	import "../../styles/animation.css";
+	import { scrollRef } from "svelte-scrolling";
+	import sveltefolioData from "../../sveltefolio.config.js";
 </script>
 
 <section use:scrollRef={"about"}>
@@ -10,7 +11,7 @@
 		<!-- About pic -->
 		<figure>
 			<img
-				src="https://avatars.githubusercontent.com/u/77770753?v=4"
+				src="{sveltefolioData.avatar_url}"
 				alt="Avatar"
 				class="rounded-lg max-w-sm mx-auto"
 				style="pointer-events: none;"
@@ -19,7 +20,7 @@
 		<!-- About paragraph -->
 		<div class="my-2 m-10 lg:text-lg fade-in" id="second">
 			<p>
-				<span class="font-semibold text-lg text-info">Itz-fork</span> is a 15yo kid who loves programming.
+				<span class="font-semibold text-lg text-info">{sveltefolioData.name}</span> is a 15yo kid who loves programming.
 				He is a back-end developer although recently started front-end development as well. He was focused
 				only on telegram bot development until a few months ago. At present, he is developing APIs with
 				FastAPI, websites with CSS, and frameworks like Vue, svelte. His favorite and widely-used programming
