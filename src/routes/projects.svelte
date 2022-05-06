@@ -2,7 +2,7 @@
 	// @ts-ignore
 	export async function load({ fetch }) {
 		const res = await fetch(
-			"https://api.github.com/search/repositories?q=org:{sveltefolioData.github_username}&sort=stars&order=desc&per_page=10"
+			`https://api.github.com/search/repositories?q=org:${sveltefolioData.github_username}&sort=stars&order=desc&per_page=${sveltefolioData.max_github_projects}`
 		);
 
 		if (res.ok) {
@@ -32,7 +32,7 @@
 	<Navbar />
 
 	<div class="text-center">
-		<h1 class="mb-5 text-5xl font-bold animate-pulse fade-in my-20">My Projects</h1>
+		<h1 class="mb-5 text-5xl font-bold fade-in my-20">My Projects</h1>
 		<p>These are my most popular github repos</p>
 	</div>
 

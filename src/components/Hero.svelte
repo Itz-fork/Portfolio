@@ -11,7 +11,7 @@
 	<div class="hero-content text-center text-neutral-content">
 		<div class="max-w-md">
 			<!-- Heading -->
-			<h1 class="mb-5 text-5xl font-bold animate-pulse fade-in">Welcome!</h1>
+			<h1 class="mb-5 text-5xl font-bold fade-in">Welcome!</h1>
 			<!-- Damn paragraph -->
 			<p class="mb-5 text-lg fade-in" id="second">
 				Hello (random) visitor, Welcome to {sveltefolioData.name}'s Portfolio! Here you can find
