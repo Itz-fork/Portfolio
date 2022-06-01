@@ -1,5 +1,5 @@
 # Sveltefolio 🦊
-![home-preview](https://user-images.githubusercontent.com/77770753/166967556-30564384-223a-4e13-9494-1b9b356236d4.jpeg)
+![home-preview](stuff/preview.jpeg)
 
 
 [Itz-fork's](https://github.com/Itz-fork) simple portfolio made with sveltekit ([demo](https://sveltefolio.vercel.app/))
