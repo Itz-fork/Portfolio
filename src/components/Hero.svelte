@@ -11,13 +11,9 @@
 	<div class="hero-content text-center text-neutral-content">
 		<div class="max-w-md">
 			<!-- Heading -->
-			<h1 class="mb-5 text-5xl font-bold fade-in">Welcome!</h1>
-			<!-- Damn paragraph -->
-			<p class="mb-5 text-lg fade-in" id="second">
-				Hello (random) visitor, Welcome to {sveltefolioData.name}'s Portfolio! Here you can find
-				most of the things about me. Just keep in mind that this is still a prototype and yet to be
-				finished
-			</p>
+			<h1 class="mb-5 text-5xl font-bold fade-in">{sveltefolioData.hero_head_msg}</h1>
+			<!-- Welcome paragraph -->
+			<p class="mb-5 text-lg fade-in" id="second">{sveltefolioData.hero_welcome_msg}</p>
 			<a href="/about">
 				<button class="btn btn-outline text-zinc-100">Learn more!</button>
 			</a>

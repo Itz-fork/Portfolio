@@ -7,14 +7,16 @@
 	import sveltefolioData from "../sveltefolio.config";
 
 	// Theme switcher
+	// I don't know why the fuck did i wrote this logic but hey, it works
 	let themeName = "";
 	onMount(() => {
 		themeChange(false);
-		themeName = window.localStorage.getItem("theme") || "Lofi";
+		let sg = window.localStorage.getItem("theme")
+		themeName = sg === "night" ? "Dark":"Light" || "Light";
 	});
 
 	function chnagethemeName() {
-		themeName = themeName == "Lofi" ? "Dracula" : "Lofi";
+		themeName = themeName === "Dark" ? "Light" : "Dark";
 	}
 </script>
 
@@ -56,7 +58,7 @@
 				>
 					<!-- Theme -->
 
-					<button data-toggle-theme="dracula" class="btn btn-xs" on:click={chnagethemeName}>
+					<button data-toggle-theme="night" class="btn btn-xs" on:click={chnagethemeName}>
 						Theme: {themeName}</button
 					>
 
@@ -64,11 +66,11 @@
 					<span class="font-semibold">Social</span>
 					<li>
 						<a href="https://github.com/{sveltefolioData.github_username}" target="_blank">Github</a>
-						<a href="https://t.me/Bruh_0x" target="_blank">Telegram</a>
-						<a href="https://twitter.com/im_itz_fork" target="_blank">Twitter</a>
+						<a href="https://t.me/{sveltefolioData.telegram_username}" target="_blank">Telegram</a>
+						<a href="https://twitter.com/{sveltefolioData.twitter_username}" target="_blank">Twitter</a>
 					</li>
 					<li>
-						<a href="https://github.com/{sveltefolioData.github_username}/Sveltefolio" target="_blank">Sauce 😋</a>
+						<a href="https://github.com/Itz-fork/Sveltefolio" target="_blank">❤️ Source</a>
 					</li>
 				</ul>
 			</div>

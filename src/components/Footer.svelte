@@ -15,10 +15,10 @@
 			<a href="https://github.com/{sveltefolioData.github_username}" target="_blank">
 				<img src="/imgs/social/github.svg" alt="Github" class="footer_social" />
 			</a>
-			<a href="https://t.me/Bruh_0x" target="_blank">
+			<a href="https://t.me/{sveltefolioData.telegram_username}" target="_blank">
 				<img src="imgs/social/telegram.svg" alt="Telegram" class="footer_social" />
 			</a>
-			<a href="https://twitter.com/im_itz_fork" target="_blank">
+			<a href="https://twitter.com/{sveltefolioData.twitter_username}" target="_blank">
 				<img src="imgs/social/twitter.svg" alt="Twitter" class="footer_social" />
 			</a>
 		</div>
