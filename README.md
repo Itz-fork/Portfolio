@@ -1,9 +1,12 @@
 # Sveltefolio 🦊
-![home-preview](stuff/preview.jpeg)
 
+<p align="center">
+    <img src="stuff/preview.jpeg">
+    </br>
+    <a href="https://github.com/Itz-fork">Itz-fork</a>'s simple portfolio made with sveltekit (<a href="https://sveltefolio.vercel.app/">Demo</a>)
+</p>
 
-[Itz-fork's](https://github.com/Itz-fork) simple portfolio made with sveltekit ([demo](https://sveltefolio.vercel.app/))
-
+---
 
 ## Run locally 💻
 ```bash
