@@ -11,7 +11,10 @@ const sveltefolioData = {
 
     // Hero
     "hero_head_msg": "What's up 👋",
-    "hero_welcome_msg": "I'm a full-stack(overflow) developer who make and break things 😇"
+    "hero_welcome_msg": "I'm a full-stack(overflow) developer who make and break things 😇",
+
+    // Contact form
+    "contact_worker_url": "https://tg-contact.itzfork.workers.dev/"
 }
 
 export default sveltefolioData;

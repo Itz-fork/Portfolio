@@ -38,4 +38,5 @@ vercel --prod
 
 ## Credits ❤️
 - Images(programming languages) - [wikimedia](https://commons.wikimedia.org/)
+- Icons used - [Iconoir](https://iconoir.com/)
 - Background image(hero) credits goes to respective original artist
