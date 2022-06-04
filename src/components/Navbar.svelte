@@ -46,7 +46,6 @@
 				<li><a href="/about">About</a></li>
 				<li><a href="/projects">Projects</a></li>
 				<li><a href="/contact">Contact</a></li>
-				<li><a href="https://github.com/Itz-fork/Sveltefolio">Open Source ❤️</a></li>
 			</ul>
 		</div>
 		<div class="flex-1">
@@ -64,7 +63,6 @@
 			<li><a href="/about">About</a></li>
 			<li><a href="/projects">Projects</a></li>
 			<li><a href="/contact">Contact</a></li>
-			<li><a href="https://github.com/Itz-fork/Sveltefolio">Open Source ❤️</a></li>
 		</ul>
 	</div>
 
@@ -100,7 +98,7 @@
 					>
 				</li>
 				<li>
-					<a href="https://github.com/Itz-fork/Sveltefolio" target="_blank">❤️ Source</a>
+					<li><a href="https://github.com/Itz-fork/Sveltefolio" target="_blank">Open Source ❤️</a>
 				</li>
 			</ul>
 		</div>

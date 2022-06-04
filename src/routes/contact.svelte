@@ -1,27 +1,29 @@
 <script>
 	// Imports
-	import { contact_data } from "../lib/store.js";
+	import { fade } from "svelte/transition";
+	import { contact_data, alert_data } from "../stores/store.js";
 	import sveltefolioData from "../sveltefolio.config.js";
 	import Navbar from "../components/Navbar.svelte";
 	import Footer from "../components/Footer.svelte";
 
-	// Defaults
-	let nullValues = false;
-	let fetchError = false;
-	let successfulFetch = false;
+	async function updatValue(skey = "", sval = true) {
+		alert_data.update((s) => ({ ...s, [skey]: sval }));
+		// Reset value after 3 seconds
+		setTimeout(() => alert_data.update((s) => ({ ...s, [skey]: !sval })), 3000);
+	}
 
 	async function sendMessage() {
 		// Shows a warning if the input values are empty
-		Object.values($contact_data).some((x) => x === null || x === "")
-			? (nullValues = true)
-			: (nullValues = false);
+		if (Object.values($contact_data).some((val) => val === null || val === "")) {
+			await updatValue("is_null");
+			return;
+		}
 
 		const resp = await fetch(sveltefolioData.contact_worker_url, {
 			method: "POST",
 			body: JSON.stringify($contact_data)
 		});
-
-		resp.ok ? (successfulFetch = true) : (fetchError = true);
+		resp.ok ? await updatValue("is_fetch_success") : await updatValue("is_fetch_suck");
 	}
 </script>
 
@@ -35,8 +37,8 @@
 
 	<form class="grid justify-center m-6">
 		<!-- Empty value warning -->
-		{#if nullValues}
-			<div class="alert alert-warning shadow-lg">
+		{#if $alert_data.is_null}
+			<div transition:fade class="alert alert-warning shadow-lg">
 				<div>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -56,8 +58,8 @@
 		{/if}
 
 		<!-- Successful fetch alert -->
-		{#if successfulFetch}
-			<div class="alert alert-success shadow-lg">
+		{#if $alert_data.is_fetch_success}
+			<div transition:fade class="alert alert-success shadow-lg">
 				<div>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -77,8 +79,8 @@
 		{/if}
 
 		<!-- Error alert -->
-		{#if fetchError}
-			<div class="alert alert-error shadow-lg">
+		{#if $alert_data.is_fetch_suck}
+			<div transition:fade class="alert alert-error shadow-lg">
 				<div>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +94,7 @@
 							d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
 						/></svg
 					>
-					<span>Error! Task failed successfully.</span>
+					<span>Unable to send the message!</span>
 				</div>
 			</div>
 		{/if}
@@ -268,5 +270,5 @@
 		</div>
 	</form>
 
-    <Footer />
+	<Footer />
 </main>
