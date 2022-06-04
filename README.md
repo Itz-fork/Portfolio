@@ -3,7 +3,7 @@
 <p align="center">
     <img src="stuff/preview.jpeg">
     </br>
-    <a href="https://github.com/Itz-fork">Itz-fork</a>'s simple portfolio made with sveltekit (<a href="https://sveltefolio.vercel.app/">Demo</a>)
+    <a href="https://github.com/Itz-fork">Itz-fork</a>'s simple portfolio made with sveltekit (<a href="https://itz-fork.vercel.app/">Demo</a>)
 </p>
 
 ---
