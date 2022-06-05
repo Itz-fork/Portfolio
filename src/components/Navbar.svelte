@@ -1,6 +1,5 @@
 <script>
 	// Imports
-	import { page } from "$app/stores";
 	import { onMount } from "svelte";
 	import { scrollTop } from "svelte-scrolling";
 	import { themeChange } from "theme-change";

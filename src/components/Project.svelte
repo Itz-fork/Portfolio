@@ -1,5 +1,5 @@
 <script>
-	import Saos from "saos/src/Saos.svelte";
+	import Saos from "saos";
 
 	export let repo = {
 		name: "",

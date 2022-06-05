@@ -27,7 +27,7 @@
 				language is Python. Also, he is currently learning dart, javascript, and bash.
 			</p>
 			<p class="mt-5">
-				While being a beginner programmer, He is also a student at "[secret name]" college. When he
+				While being a beginner programmer, He is also a student at "X" college. When he
 				isn't sticking his eyes on a computer screen he listens to the music of artists such as NF,
 				TheFatRat, and The Score so he could start studying with a relaxed mind.
 			</p>

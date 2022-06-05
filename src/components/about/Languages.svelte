@@ -1,7 +1,7 @@
 <script>
 	// Importing libs
 	import { scrollRef } from "svelte-scrolling";
-	import Saos from "saos/src/Saos.svelte";
+	import Saos from "saos";
 
 	// Importing css
 	import "../../styles/tailclasses.css";
