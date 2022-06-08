@@ -1,6 +1,6 @@
 /* Language component */
 .lang_card {
-	@apply flex flex-grow card bg-base-100 glass m-2 opacity-80;
+	@apply flex flex-grow card bg-base-100 glass m-2 opacity-80 max-w-sm;
 }
 
 .lang_ico {

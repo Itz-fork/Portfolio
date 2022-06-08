@@ -8,7 +8,10 @@
 
 ---
 
-## Run locally 💻
+## Use this 🔥
+You are free to use this portfolio. Please make sure to give me some credits if you do so :)
+
+### Run locally 💻
 ```bash
 git clone https://github.com/Itz-fork/Sveltfolio.git
 cd Sveltfolio
