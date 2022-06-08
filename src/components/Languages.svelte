@@ -4,7 +4,7 @@
 	import Saos from "saos";
 
 	// Importing css
-	import "../../styles/tailclasses.css";
+	import "../styles/tailclasses.css";
 
 	// Language list
 	let langsList = [

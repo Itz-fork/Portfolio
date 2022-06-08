@@ -21,7 +21,7 @@
 	import Navbar from "../components/Navbar.svelte";
 	import Footer from "../components/Footer.svelte";
 	import sveltefolioData from "../sveltefolio.config.js";
-	
+
 	export /**
 	 * @type {never[]}
 	 */
